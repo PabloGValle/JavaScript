@@ -78,6 +78,37 @@ function extern() {
     function intern() {
         console.log("Función interna");
     }
+    intern()
 }
 
 extern()
+// intern() Fuera del scope, no esta definida fuera
+
+// Funciones de orden superior
+
+function applyFunc(func, param) {
+    func(param)
+}
+
+applyFunc(myFunc4, "Funcion de orden superior")
+
+// forEach
+
+let myArray = [1, 2, 3, 4]
+
+myMap = new Map([
+    ['name', 'Pablo'],
+    ['email', 'pablogv95@yahoo.es'],
+    ['age', 29]
+])
+
+mySet = new Set(["Pablo", "González", "Pei", 29, true, "pablogv95@yahoo.es"])
+
+myArray.forEach(function(value) {
+    console.log(value);
+    })
+
+myArray.forEach((value) => console.log(value))
+mySet.forEach((value) => console.log(value))
+myMap.forEach((value) => console.log(value))
+
